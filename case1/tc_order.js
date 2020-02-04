@@ -16,12 +16,14 @@
    The itemQty array contains the quantity ordered of each item
    
 */
-
-var item = [10582, 23015, 41807, 10041];
-
-var itemPrice = ["1975 Green Bay Packers Football (signed), item 10582", "Tom Laundry 1955 Football Card (unsigned), item 23015", "1916 Army-Navy Game, Framed Photo (signed), item 41807", "Protective Card Sheets, item 10041"];
-
-var itemQty = [1, 1, 1, 4];
+//sets array for item numbers
+var item = ["10582", "23015", "41807", "10041"];
+//sets array for item descriptions
+var itemDescription = ["1975 Green Bay Packers Football (signed), item 10582", "Tom Laundry 1955 Football Card (unsigned), item 23015", "1916 Army-Navy Game, Framed Photo (signed), item 41807", "Protective Card Sheets, item 10041"];
+//sets array for item prices
+var itemPrice = ["149.93", "89.98", "334.93", "22.67"];
+//sets array for item quantitys
+var itemQty = ["1", "1", "1", "4"];
 
 
 
