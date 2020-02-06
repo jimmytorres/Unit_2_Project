@@ -35,17 +35,32 @@ var ratingSum = 0;
 var ratingsCount = ratings.length;
 
 for(var i = 0; i < ratings.length; i++){
-
+   ratingSum += ratings[i];
 }
 
 
 var ratingsAvg = ratingSum/ratingsCount;
 
 var ratingReport = "<h1>Customer Reviews</h1>";
-ratingReport += "<h2>" + ratingsAvg + "out of 5 stars(count reviews)</h2>";
+ratingReport += "<h2>" + ratingsAvg + "out of 5 stars (" + ratingsCount + "Reviews)</h2>";
 
 
+for(var w = 0; w < 3; w++){
+   ratingReport += "<div class='review'>";
+   ratingReport += "<h1>" + ratingTitles[w] + "</h1>";
+   ratingReport += "<table>";
+   ratingReport += "<tr><th>By</th><td>" + ratingAuthors[w] + "</td></tr>";
+   ratingReport += "<tr><th>Review Date</th><td>" + ratingDates[w] + "</td></tr>";
+   ratingReport += "<tr><th>Rating</th><td>";
 
+   for(var h = 0; h < ratings[w]; h++){
+      ratingReport += "<img src='hg_star.png' />";
+   }
+
+   ratingReport += "</td></tr></table>" + ratingSummaries[w] + "</div>";
+}
+
+document.getElementsByTagName("aside")[0].innerHTML = ratingReport;
 
 
 
